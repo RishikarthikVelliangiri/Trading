@@ -8,7 +8,3 @@
  Rishikarthik 
  DN Maanya
  Raghav Kajaria
-
- New case
- Hello
- Testing case
