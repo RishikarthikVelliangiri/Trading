@@ -40,10 +40,12 @@ int main() {
             transaction.displayTransactionHistory();
         } else if (transactionType == 4) {
             break;
-        } else {
+        } else if (transactionType == 2 || transactionType == 1){
             cout << "Enter transaction amount: ";
             cin >> transactionAmount;
             transaction.saveTransaction(transactionType, transactionAmount);
+        } else {
+            cout << "Enter 1, 2, 3 or 4!" << endl;
         }
     }
 
