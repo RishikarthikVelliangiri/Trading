@@ -1,3 +1,6 @@
+#ifndef INCLUDE_STATEMENTS_H
+#define INCLUDE_STATEMENTS_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -10,3 +13,5 @@
 #include <thread>
 
 using namespace std;
+
+#endif
