@@ -1,6 +1,6 @@
-// Fetch_User_Data.h
-#ifndef FETCH_USER_DATA_H
-#define FETCH_USER_DATA_H
+// Fetch_User_Data.hpp
+#ifndef FETCH_USER_DATA_HPP
+#define FETCH_USER_DATA_HPP
 
 #include "include_statements.hpp"
 
@@ -10,6 +10,7 @@ private:
     vector<string> passwords;
     vector<int> ages;
     vector<double> amounts;
+    vector<string> userIDs;  // New vector to store user IDs
 
 public:
     void setUserData(const string& name, const string& pass, int userAge, double deposit);
@@ -19,6 +20,10 @@ public:
     const vector<string>& getPasswords() const;
     const vector<int>& getAges() const;
     const vector<double>& getAmounts() const;
+    const vector<string>& getUserIDs() const;  // Getter for user IDs
+
+    // Function to generate a 10-digit user ID
+    string generateUserID();
 };
 
 #endif
