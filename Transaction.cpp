@@ -13,7 +13,7 @@ bool Transaction::makeWithdrawal(double amount) {
         account -= amount;
         return true;
     } else {
-        std::cout << "Funds will be less than 10000 in the DMAT account." << std::endl;
+        cout << "Funds will be less than 10000 in the DMAT account." << endl;
         return false;
     }
 }
@@ -36,15 +36,15 @@ void Transaction::saveTransaction(int transactionType, double transactionAmount)
 }
 
 void Transaction::displayTransactionHistory() const {
-    std::cout << "\nType         Amount         Account Balance\n\n";
+    cout << "\nType         Amount         Account Balance\n\n";
     for (size_t i = 0; i < transactions.size(); i++) {
         if (transactions[i] >= 0) {
-            std::cout << "Deposit      " << transactions[i] << "              " << accountBalances[i] << std::endl;
+            cout << "Deposit      " << transactions[i] << "              " << accountBalances[i] << endl;
         } else {
-            std::cout << "Withdrawal   " << transactions[i] << "              " << accountBalances[i] << std::endl;
+            cout << "Withdrawal   " << transactions[i] << "              " << accountBalances[i] << endl;
         }
     }
-    std::cout << std::endl;
+    cout << endl;
 }
 
 double Transaction::getCurrentBalance() const {
