@@ -31,6 +31,7 @@ int main() {
     cin >> age;
     cout << "Enter the amount you would like to deposit: ";
     cin >> deposit;
+    
     // Display starting balance
     cout << "Starting Balance: " << transaction.getCurrentBalance() << "\n\n";
     user.setUserData(userName, password, age, deposit);
@@ -66,7 +67,7 @@ int main() {
         if (option == 0) {
             break;
         }
-
+        // Switches between options for buy and sell
         switch (option) {
             case 1:
                 cout << "Enter the quantity to buy: ";
@@ -119,26 +120,26 @@ int main() {
                     cout << "Time Unit " << i + 1 << ": " << analysis[i] << endl;
                 }
 
-                // Perform analysis based on the conditions you provided
-                if (analysis[1] - analysis[0] >= 2 && analysis[2] - analysis[1] >= 2 && analysis[3] - analysis[2] >= 2 &&
+                // Perform analysis based on the conditions of changes in prices meet a certain threshold
+                if (analysis[1] - analysis[0] >= 50 && analysis[2] - analysis[1] >= 50 && analysis[3] - analysis[2] >= 50 &&
                     analysis[4] - analysis[3] == 0 && analysis[5] - analysis[4] == 0) {
                     cout << "Bearish Engulfing Pattern: Price would likely decline" << endl;
-                } else if (analysis[1] - analysis[0] <= -2 && analysis[2] - analysis[1] <= -2 && analysis[3] - analysis[2] <= -2 &&
+                } else if (analysis[1] - analysis[0] <= -50 && analysis[2] - analysis[1] <= -50 && analysis[3] - analysis[2] <= -50 &&
                            analysis[4] - analysis[3] == 0 && analysis[5] - analysis[4] == 0) {
                     cout << "Bullish Engulfing Pattern: Price would likely increase" << endl;
-                } else if (analysis[1] - analysis[0] >= 2 && analysis[2] - analysis[1] >= 2 && analysis[3] - analysis[2] <= -4) {
+                } else if (analysis[1] - analysis[0] >= 50 && analysis[2] - analysis[1] >= 50 && analysis[3] - analysis[2] <= -150) {
                     cout << "Bearish Evening Star: Sellers are taking control, likely to stay "
                             "lower for longer" << endl;
-                } else if (analysis[1] - analysis[0] >= 2 && analysis[2] - analysis[1] >= 2 && analysis[3] - analysis[2] >= 2 &&
-                           analysis[4] - analysis[3] == -1) {
+                } else if (analysis[1] - analysis[0] >= 50 && analysis[2] - analysis[1] >= 50 && analysis[3] - analysis[2] >= 50 &&
+                           analysis[4] - analysis[3] == -50) {
                     cout << "Bearish Harami: Price will likely go up, not much to worry about "
                             "but keep an eye on it." << endl;
-                } else if (analysis[1] - analysis[0] <= -2 && analysis[2] - analysis[1] <= -2 && analysis[3] - analysis[2] <= -2 &&
-                           analysis[4] - analysis[3] == 1) {
+                } else if (analysis[1] - analysis[0] <= -100 && analysis[2] - analysis[1] <= -100 && analysis[3] - analysis[2] <= -200 &&
+                           analysis[4] - analysis[3] >= 50) {
                     cout << "Bullish harami: Price will likely go down, not much to worry about "
                             "but keep an eye on it. " << endl;
                 } else {
-                    cout << "Blank Analysis (Test Case)" << endl;
+                    cout << "No Analysis Called" << endl;
                 }
 
                 analysis.clear(); // Clear the analysis vector after performing analysis
