@@ -1,7 +1,7 @@
 // Fetch_User_Data.cpp
 #include "Fetch_User_Data.hpp"
 
-void Fetch_User_Data::setUserData(const string& name, const string& pass, int userAge, double deposit) {
+void Fetch_User_Data::setUserData(const string& name, const string& pass, const string& userAge, double deposit, const string& userID) {
     names.push_back(name);
     passwords.push_back(pass);
     ages.push_back(userAge);
@@ -18,7 +18,7 @@ const vector<string>& Fetch_User_Data::getPasswords() const {
     return passwords;
 }
 
-const vector<int>& Fetch_User_Data::getAges() const {
+const vector<string>& Fetch_User_Data::getAges() const {
     return ages;
 }
 
