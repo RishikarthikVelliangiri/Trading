@@ -1,6 +1,7 @@
 # Cpp_Project
  This repository is for a college project. 
  In this project we are creating a platform for stock trading.
+ 
 
  Authors:
  Kunth Shah
@@ -8,8 +9,3 @@
  Rishikarthik 
  DN Maanya
  Raghav Kajaria
-
- trial changes made
- and these are the changes
- hi there
- 
