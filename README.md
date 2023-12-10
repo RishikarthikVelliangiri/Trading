@@ -8,7 +8,7 @@ Kunth Shah
 Raghav Kajaria
 Neel Patel
 Maanya DN
-Rishikarthik Velligangiri
+Rishikarthik Velliangiri
 ---------------------------------------------------------------------------------------------------
                                 ------Processes and features------
 ----------------------------------------------------------------------------------------------------
